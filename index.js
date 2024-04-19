@@ -50,7 +50,8 @@ app.post("/add-cobj", async (req, res) => {
         };
 
         var resp = await axios.post(`${BASE_URI}/objects/${ObjectType}`, addObj, { headers });
-        res.redirect("/update-cobj")
+
+        res.redirect(`/update-cobj/${resp.data.id}`)
     } catch (e) {
         res.render("error", { code: 500, message: e?.response?.data?.message ?? e.message });
     }
