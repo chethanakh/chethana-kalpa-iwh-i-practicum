@@ -56,3 +56,24 @@ input[type="submit"] {
     padding: .375rem 1rem;
     margin-top: 10px;
 }
+
+.v-tbl{
+    margin: auto;
+    width: 80%;
+}
+.v-tbl th{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    color: #ffffff;
+}
+
+.v-tbl td{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px #000 solid;
+}

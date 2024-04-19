@@ -1,0 +1,38 @@
+doctype html
+html 
+    head 
+        title= `Create New Vehicle`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+h1 Register Vehicle Object Table
+a(href='/') Go Back
+
+form(action="/add-cobj", method="post" style="margin:20px") 
+    label(for="regstration-number") Vehicle registration number 
+    input(type="text" name="regstration_number" id="regstration-number" required placeholder="ABC-1234")
+    br
+    label(for="type") Vehicle Type
+    select(name="type" id="type" required) 
+        option(value="") Select Vehicle Type
+        option(value="Car") Car
+        option(value="Van") Van
+        option(value="Motor Cycles") Motor Cycles
+        option(value="Lorry") Lorry
+    br
+    br
+    label(for="features") features
+    label(for="features-1" style="display:inline") A/C 
+    input(type="checkbox", name="features" value="A/C" ,id="features-1" style="display:inline;margin-right:15px") 
+    
+    label(for="features-2" style="display:inline") Drive Assistance 
+    input(type="checkbox", name="features" value="Drive Assistance" ,id="features-2" style="display:inline;margin-right:15px") 
+
+    label(for="features-3" style="display:inline") NOS 
+    input(type="checkbox", name="features" value="NOS" ,id="features-3" style="display:inline;margin-right:15px") 
+
+    label(for="features-4" style="display:inline") ABS 
+    input(type="checkbox", name="features" value="ABS" ,id="features-4" style="display:inline;margin-right:15px") 
+
+    br
+    br
+    input(type="submit", value="Save")

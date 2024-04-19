@@ -1,0 +1,26 @@
+doctype html
+html 
+    head 
+        title= 
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+h1 Vehicle Object Table
+a(href='/add-cobj') add vehicle
+br
+br
+table.v-tbl
+    tr
+        th Reg No
+        th Type
+        th Feature
+        th 
+    each vehicle in data
+        tr
+            td #{vehicle.properties.regstration_number}
+            td #{vehicle.properties.type} 
+            td 
+              ul
+                each features in vehicle.properties.features?vehicle.properties.features.split(';'):[]
+                  li  #{features} 
+            td 
+                a(href='/update-cobj/'+vehicle.properties.hs_object_id) edit vehicle
